@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Data files (optional: don't commit large datasets)
+data/
+
+# Model files
+models/
+*.pkl
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# VSCode settings
+.vscode/
+
+# Python cache
+*.pyc
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db
