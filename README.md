@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ## 🙏 Acknowledgments
 
 - Dataset: [Telco Customer Churn - Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn)
-- Tutorial & Code Inspiration: [Siddhardhan's YouTube Video](https://www.youtube.com/watch?v=qNglJgNOb7A)
+
 
 ---
 
