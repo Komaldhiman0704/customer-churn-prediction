@@ -1,51 +1,92 @@
-# Customer Churn Prediction Using Machine Learning (Telco Dataset)
+# Customer Churn Prediction with Machine Learning (Telco Dataset)
 
-## Project Overview
-This project predicts customer churn for a telecom company using machine learning models. The goal is to determine if a customer will leave the service based on their subscription details and usage patterns. The workflow includes data loading, exploratory data analysis (EDA), preprocessing (handling missing values, encoding categorical features, addressing class imbalance with SMOTE), model training using tree-based classifiers (Decision Tree, Random Forest, XGBoost), and model evaluation with cross-validation metrics.
+---
 
-## Dataset
-The dataset used is the Telco Customer Churn dataset from Kaggle. It has 7,043 customer records and contains features such as account tenure, monthly charges, total charges, and whether the customer churned (Yes/No).
+## 📋 Project Overview
 
-Key points about the data:
-- `TotalCharges` had missing values represented as spaces, replaced with 0.0 then converted to float.
-- The target column `Churn` is imbalanced and addressed using the SMOTE technique.
-- The dataset contains a mix of categorical and numerical features.
+This project implements a customer churn prediction system for a telecom company using machine learning techniques. The goal is to predict whether a customer will leave (churn) based on their account details and usage patterns.
 
-## How to Run
+The key steps followed in this project are:
+- Data loading and initial inspection
+- Exploratory Data Analysis (EDA) including visualization
+- Data preprocessing (handling missing values, encoding categorical variables)
+- Addressing class imbalance with SMOTE oversampling
+- Model building using tree-based classifiers: Decision Tree, Random Forest, and XGBoost
+- Model evaluation with cross-validation and metrics such as accuracy, confusion matrix, and classification report
 
-### Option 1: Run in Google Colab
-1. Open the notebook `notebooks/Customer_Churn_Telco.ipynb` in Google Colab.
-2. Upload the Telco Customer Churn CSV dataset or mount your Google Drive with the dataset.
-3. Run the notebook cells step-by-step following the analysis and modeling process.
+---
 
-### Option 2: Run Locally
-1. Clone this repository.
-2. Create a Python virtual environment and activate it:
+## 📂 Dataset
 
+The dataset used is the publicly available **Telco Customer Churn** dataset from Kaggle, containing 7,043 customer records with features like tenure, monthly charges, total charges, and churn status.
+
+**Important notes about the dataset:**
+
+- The `TotalCharges` column contains some missing values represented as spaces, replaced with 0.0, then converted to float.
+- The target column `Churn` is imbalanced; addressed by SMOTE oversampling during training.
+- Mix of categorical and numerical features are present.
+
+---
+
+## 🚀 How to Run
+
+### Run in Google Colab (Recommended)
+
+1. Open the notebook (`Customer_Churn_Telco.ipynb`) in [Google Colab](https://colab.research.google.com/).
+2. Upload the Telco dataset CSV file or mount Google Drive containing it.
+3. Run the notebook cells sequentially to reproduce the full workflow — from data analysis to model evaluation.
+
+### Run Locally
+
+1. Clone this repository:
+git clone https://github.com/Komaldhiman0704/customer-churn-prediction.git
+cd customer-churn-prediction
+
+
+
+2. (Optional) Create and activate a virtual environment:
 python -m venv venv
-source venv/bin/activate # Linux/Mac
+source venv/bin/activate # macOS/Linux
 venv\Scripts\activate # Windows
 
-3. Install dependencies:
+
+
+3. Install required packages:
 pip install -r requirements.txt
-4. Run the training script:
-python src/train_models.py --data_path data/Telco-Customer-Churn.csv
 
-5. Models and evaluation reports will be saved in the `models/` and `reports/` directories.
 
-## Results
-- Cross-validated accuracy and other classification metrics are reported.
-- Confusion matrix and feature importance plots demonstrate the model performance.
-- Models used: Decision Tree, Random Forest, and XGBoost.
+4. Open and run the notebook `Customer_Churn_Telco.ipynb` using Jupyter Notebook or JupyterLab.
 
-## Notes
-- Data preprocessing includes converting `TotalCharges` to float after handling empty strings.
-- SMOTE oversampling is used to mitigate the class imbalance in the `Churn` target.
-- Tree-based models are chosen for robustness and no need for feature scaling.
+---
 
-## Acknowledgments
-- Dataset from Kaggle: [Telco Customer Churn](https://www.kaggle.com/blastchar/telco-customer-churn)
-- Tutorial and project guide inspired by Siddhardhan’s YouTube channel: [Customer Churn Prediction Using ML](https://www.youtube.com/watch?v=qNglJgNOb7A)
+## 📊 Results
 
-## License
+- Multiple tree-based classifiers were trained and compared.
+- Evaluated using cross-validation accuracy, confusion matrix, and classification reports.
+- SMOTE effectively handled class imbalance, improving model performance.
+- Visualizations include distribution plots and boxplots for EDA insights.
+
+---
+
+## 📝 Additional Information
+
+- The notebook contains detailed comments and explanations aligned with the tutorial by Siddhardhan.
+- The project focuses on practical machine learning workflow and model interpretability.
+- Feel free to extend this project by adding hyperparameter tuning or alternative models.
+
+---
+
+## 🙏 Acknowledgments
+
+- Dataset: [Telco Customer Churn - Kaggle](https://www.kaggle.com/blastchar/telco-customer-churn)
+- Tutorial & Code Inspiration: [Siddhardhan's YouTube Video](https://www.youtube.com/watch?v=qNglJgNOb7A)
+
+---
+
+## 📄 License
+
 This project is licensed under the MIT License.
+
+---
+
+Thank you for visiting! Feel free to ⭐ the repo if this was helpful.
